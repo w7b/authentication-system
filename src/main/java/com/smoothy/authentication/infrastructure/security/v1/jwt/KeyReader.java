@@ -1,4 +1,4 @@
-package com.smoothy.authentication.infrastructure.security.jwt;
+package com.smoothy.authentication.infrastructure.security.v1.jwt;
 
 import org.springframework.context.annotation.Configuration;
 

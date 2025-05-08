@@ -1,5 +1,5 @@
-package com.smoothy.authentication.infrastructure.security.oauth2.Implementations;
-import com.smoothy.authentication.infrastructure.security.oauth2.repository.iOAuthRepository;
+package com.smoothy.authentication.infrastructure.security.v1.oauth2.Implementations;
+import com.smoothy.authentication.infrastructure.security.v1.oauth2.repository.iOAuthRepository;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 
 import java.net.URL;

@@ -4,9 +4,9 @@ import com.smoothy.authentication.adapters.inbound.dtos.out.ResponseOAuthUser;
 import com.smoothy.authentication.adapters.mapper.OAuthMapper;
 import com.smoothy.authentication.adapters.outbound.entities.OAuthEntity;
 import com.smoothy.authentication.adapters.outbound.repositories.OAuthRepository;
-import com.smoothy.authentication.infrastructure.security.oauth2.Implementations.GitHubImpl;
-import com.smoothy.authentication.infrastructure.security.oauth2.Implementations.GoogleImpl;
-import com.smoothy.authentication.infrastructure.security.oauth2.repository.iOAuthRepository;
+import com.smoothy.authentication.infrastructure.security.v1.oauth2.Implementations.GitHubImpl;
+import com.smoothy.authentication.infrastructure.security.v1.oauth2.Implementations.GoogleImpl;
+import com.smoothy.authentication.infrastructure.security.v1.oauth2.repository.iOAuthRepository;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
@@ -34,7 +34,7 @@ public class OAuthService {
 
         iOAuthRepository impl = switch (provider) {
             case "google" -> new GoogleImpl(oAuth2User); // OIDC - sub, email, name, picture
-            case "github" -> new GitHubImpl(oAuth2User); // GitHub - id, login, email, avatar_url
+            case "github" -> new GitHubImpl(oAuth2User); // GitHub - id, authenticateUser, email, avatar_url
             default -> throw new IllegalArgumentException("OAuth2 provider não suportado: " + provider);
         };
 

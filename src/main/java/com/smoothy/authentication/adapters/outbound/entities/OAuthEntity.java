@@ -38,6 +38,8 @@ public class OAuthEntity {
     @OneToMany(mappedBy = "accountId", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<RoleEntity> roles = new ArrayList<>();
 
+    public OAuthEntity() {}
+
     public String getAvatar_url() {
         return avatar_url;
     }

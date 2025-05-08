@@ -9,14 +9,14 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.UUID;
 
 public class CustomerUserDetails implements UserDetails {
+
     private final UserEntity user;
 
-
-    public CustomerUserDetails(UserEntity user) {
-        this.user = user;
-    }
+    public UUID getUuid() { return user.getUuid(); }
+    public CustomerUserDetails(UserEntity user) { this.user = user; }
 
 
     @Override
