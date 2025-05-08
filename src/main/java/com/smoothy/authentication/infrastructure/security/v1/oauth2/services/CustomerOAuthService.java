@@ -1,10 +1,7 @@
-package com.smoothy.authentication.infrastructure.security.oauth2.services;
+package com.smoothy.authentication.infrastructure.security.v1.oauth2.services;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.smoothy.authentication.adapters.inbound.dtos.out.ResponseOAuthUser;
-import com.smoothy.authentication.adapters.inbound.dtos.out.ResponseOAuthLogin;
 import com.smoothy.authentication.core.services.OAuthService;
-import com.smoothy.authentication.infrastructure.security.jwt.JwtService;
+import com.smoothy.authentication.infrastructure.security.v1.jwt.JwtService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -51,14 +48,12 @@ public class CustomerOAuthService implements AuthenticationSuccessHandler {
         OAuth2RefreshToken refreshToken = authorizedClient.getRefreshToken();
 
         OAuth2User oAuth2User = (OAuth2User) authentication.getPrincipal();
-        String jwt = jwtService.generateToken(registrationId, oAuth2User.getName());
+//        String jwt = jwtService.generateToken(oAuth2User.getName());
 
-        ResponseOAuthUser userResponse = authService.responseOAuthUser(authentication, jwt);
-        ResponseOAuthLogin payload = new ResponseOAuthLogin(jwt, userResponse);
+//        ResponseOAuthUser userResponse = authService.responseOAuthUser(authentication, jwt);
+//        ResponseOAuthLogin payload = new ResponseOAuthLogin(jwt, userResponse);
 
-
-        response.setContentType("application/json");
         response.setStatus(HttpServletResponse.SC_OK);
-        new ObjectMapper().writeValue(response.getWriter(), payload);
+//        new ObjectMapper().writeValue(response.getWriter(), payload);
     }
 }

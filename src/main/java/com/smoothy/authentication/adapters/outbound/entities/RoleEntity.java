@@ -10,7 +10,7 @@ import java.util.UUID;
 public class RoleEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id", updatable = false, nullable = false)
     private Long id;
 
@@ -21,6 +21,7 @@ public class RoleEntity {
     @Column(name = "account_id", nullable = false)
     private UUID accountId;
 
+    public RoleEntity() {}
 
     public RoleEntity(RoleAssigner role, UUID accountId) {
         this.role = role;

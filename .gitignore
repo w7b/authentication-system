@@ -5,7 +5,7 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 **/keys/private_key.pem
-**/keys/public_key.pem.pem
+**/keys/public_key.pem
 **/.env
 
 ### STS ###

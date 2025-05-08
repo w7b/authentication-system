@@ -1,8 +1,16 @@
 package com.smoothy.authentication.infrastructure.Exceptions;
 
-public class ValidationException extends RuntimeException {
+import org.springframework.http.HttpStatus;
 
-    public ValidationException(String message) {
+public class ValidationException extends RuntimeException {
+    private final HttpStatus status;
+
+    public ValidationException(String message, HttpStatus status) {
         super(message);
+        this.status = status;
+    }
+
+    public HttpStatus getStatus() {
+        return status;
     }
 }

@@ -1,4 +1,4 @@
-package com.smoothy.authentication.infrastructure.security.oauth2.repository;
+package com.smoothy.authentication.infrastructure.security.v1.oauth2.repository;
 
 public interface iOAuthRepository {
     public String getAvatar_url();

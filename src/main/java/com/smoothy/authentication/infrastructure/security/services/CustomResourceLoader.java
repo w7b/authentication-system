@@ -1,6 +1,6 @@
 package com.smoothy.authentication.infrastructure.security.services;
 
-import com.smoothy.authentication.infrastructure.security.jwt.KeyReader;
+import com.smoothy.authentication.infrastructure.security.v1.jwt.KeyReader;
 import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.Resource;
 

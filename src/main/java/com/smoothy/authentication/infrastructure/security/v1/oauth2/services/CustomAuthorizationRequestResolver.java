@@ -1,4 +1,4 @@
-package com.smoothy.authentication.infrastructure.security.oauth2.services;
+package com.smoothy.authentication.infrastructure.security.v1.oauth2.services;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.security.oauth2.client.registration.ClientRegistrationRepository;
