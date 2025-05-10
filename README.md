@@ -1,4 +1,3 @@
 # Authentication System
-### JWT, OAuth2, Verification email
-
-.env 
+### JWT, OAuth2
+.env
