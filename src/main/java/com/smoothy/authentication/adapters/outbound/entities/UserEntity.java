@@ -21,8 +21,6 @@ public class UserEntity {
     @Column(columnDefinition = "UUID", updatable = false, nullable = false)
     private UUID uuid;
 
-//    @Column(name = "full_name", unique = false, length = 100)
-//    private String fullName;
 
     @Column(name = "login", unique = true, length = 64)
     private String login;
@@ -40,8 +38,6 @@ public class UserEntity {
     @Column(name = "created_at", nullable = false)
     private Instant createdAt = Instant.now();
 
-    //    @Column(name = "is_verified", unique = false, length = 7)
-    //    private boolean isVerified;
 
     @OneToMany(mappedBy = "accountId", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<RoleEntity> roles = new ArrayList<>();

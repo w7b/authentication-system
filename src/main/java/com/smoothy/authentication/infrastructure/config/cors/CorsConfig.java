@@ -9,13 +9,13 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-
 import java.util.Arrays;
 
 @Component
 @EnableWebMvc
 public class CorsConfig {
 
+    private static final Long MAX_AGE = 3600L;
     @Bean
     public FilterRegistrationBean corsFilter() {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
@@ -35,7 +35,7 @@ public class CorsConfig {
                 HttpMethod.PATCH.name(),
                 HttpMethod.DELETE.name()
         ));
-        config.setMaxAge(3600L);
+        config.setMaxAge(MAX_AGE);
         source.registerCorsConfiguration("/**", config);
 
         FilterRegistrationBean bean = new FilterRegistrationBean(new CorsFilter(source));
