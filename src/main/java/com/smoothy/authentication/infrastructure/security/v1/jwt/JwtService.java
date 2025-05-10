@@ -71,9 +71,9 @@ public class JwtService {
                     .collect(Collectors.toList());
 
             return JWT.create()
-                    .withSubject(user.getLogin())
-                    .withClaim("id", user.getUuid().toString())
-                    .withClaim("role", roles)
+                    .withSubject(user.getLogin()) // username
+                    .withClaim("id", user.getUuid().toString()) // uuid
+                    .withClaim("role", roles) // Role
                     .withIssuedAt(new Date())
                     .withExpiresAt(new Date(System.currentTimeMillis() + this.expirationTime))
                     .sign(algorithm);

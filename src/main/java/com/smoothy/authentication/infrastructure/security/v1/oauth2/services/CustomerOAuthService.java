@@ -17,6 +17,7 @@ import org.springframework.security.web.authentication.AuthenticationSuccessHand
 
 import java.io.IOException;
 
+// ------ This will be restructured soon. ------
 @Configuration
 public class CustomerOAuthService implements AuthenticationSuccessHandler {
 
@@ -48,10 +49,17 @@ public class CustomerOAuthService implements AuthenticationSuccessHandler {
         OAuth2RefreshToken refreshToken = authorizedClient.getRefreshToken();
 
         OAuth2User oAuth2User = (OAuth2User) authentication.getPrincipal();
-//        String jwt = jwtService.generateToken(oAuth2User.getName());
+        //String jwt = jwtService.generateToken(oAuth2User.getName());
 
-//        ResponseOAuthUser userResponse = authService.responseOAuthUser(authentication, jwt);
-//        ResponseOAuthLogin payload = new ResponseOAuthLogin(jwt, userResponse);
+        //ResponseOAuthUser userResponse = authService.responseOAuthUser(authentication, jwt);
+//        ResponseOAuthUser payload = new ResponseOAuthUser(
+//                userResponse.avatar_url(),
+//                userResponse.accountId(),
+//                userResponse.email(),
+//                userResponse.name(),
+//                userResponse.locale(),
+//                userResponse.provider()
+//        );
 
         response.setStatus(HttpServletResponse.SC_OK);
 //        new ObjectMapper().writeValue(response.getWriter(), payload);
