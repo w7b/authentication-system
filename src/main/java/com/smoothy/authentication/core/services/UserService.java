@@ -12,12 +12,17 @@ import com.smoothy.authentication.adapters.outbound.repositories.RoleRepository;
 import com.smoothy.authentication.adapters.outbound.repositories.UserRepository;
 import com.smoothy.authentication.core.services.config.UserCheck;
 import com.smoothy.authentication.infrastructure.Exceptions.ValidationException;
+import com.smoothy.authentication.infrastructure.security.services.CustomerUserDetails;
 import com.smoothy.authentication.infrastructure.security.v1.jwt.JwtService;
+import jakarta.servlet.http.HttpSession;
 import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -103,6 +108,58 @@ public class UserService {
         return userMapper.fromEntityToResponseDTO(savedUser);
     }
 
+    public void logoutUser(HttpSession session) {
+
+        if(session != null) {
+            session.invalidate();
+            logger.info("User Service > logoutUser | #1 LOG OUT. {}", session.getId());
+        }
+    }
+
+    public ResponseEntity<?> selectCurrentUser(CustomerUserDetails userDetails) {
+        String username = attemptGetUsername(userDetails, 2);
+
+        if (username == null) {
+            logger.warn("Falha ao obter username após tentativas.");
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Unable to extract username.");
+        }
+
+        try {
+            UserEntity user = userRepository.findByLogin(username)
+                    .orElseThrow(() -> new UsernameNotFoundException("Usuário não encontrado no DB"));
+
+            UserResponseDto infoResponse = new UserResponseDto(
+                    user.getUuid(),
+                    user.getLogin(),
+                    user.getEmail(),
+                    user.getPhoneNumber()
+            );
+
+            return ResponseEntity.ok(infoResponse);
+
+        } catch (UsernameNotFoundException e) {
+            logger.warn("Usuário autenticado não encontrado no banco: {}", username, e);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User details not found in database.");
+        } catch (ValidationException e) {
+            logger.trace("ValidationException ao obter usuário: {}", e.getMessage());
+            HttpStatus status = e.getCause() != null ? HttpStatus.INTERNAL_SERVER_ERROR : HttpStatus.valueOf(e.getCause().getMessage());
+            return ResponseEntity.status(status).body("Error getting current user info: " + e.getMessage());
+        }
+    }
+
+    private String attemptGetUsername(UserDetails userDetails, int attempts) {
+        for (int i = 0; i < attempts; i++) {
+            String username = userDetails.getUsername();
+            if (username != null) {
+                return username;
+            }
+        }
+        return null;
+    }
+
 }
 
-//Classes da minha service estao passando UserEntity como tipo dela
+
+
+
+

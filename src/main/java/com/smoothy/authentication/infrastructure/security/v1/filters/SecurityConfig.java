@@ -60,6 +60,7 @@ public class SecurityConfig {
 //                                )
 //                        )
 //                )
+
 //                .oauth2ResourceServer(oauth2 -> oauth2
 //                        .jwt(jwt -> jwt.jwtAuthenticationConverter(new JwtAuthenticationConverter()))
 //                )
@@ -68,6 +69,7 @@ public class SecurityConfig {
                 .httpBasic(AbstractHttpConfigurer::disable)
 
                 .addFilterBefore(filtersSecurity, UsernamePasswordAuthenticationFilter.class)
+
                 .logout(logout -> logout
                         .logoutUrl("/api/v1/logout")
                         .invalidateHttpSession(true)

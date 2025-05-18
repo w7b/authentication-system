@@ -1,0 +1,63 @@
+type: collection.insomnia.rest/5.0
+name: Authentication System
+meta:
+  id: wrk_6ec04b8e23da4f3bb25d17696d1ba527
+  created: 1744566872961
+  modified: 1745858434931
+collection:
+  - url: "{{ _.baseUrl }}api/v1/user"
+    name: /api/v1/user
+    meta:
+      id: req_e036b4bb3f1c42bd813657cae4a461fa
+      created: 1747419776979
+      modified: 1747419847055
+      isPrivate: false
+      sortKey: -1747419776979
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_75d06d4572c0692e4707fc9e3e9e4ebab8ba3ebe
+    created: 1745858435126
+    modified: 1747419831041
+  cookies:
+    - key: JSESSIONID
+      value: 1420E6F50A0C05DD15354159581044F1
+      domain: localhost
+      path: /
+      httpOnly: true
+      hostOnly: true
+      creation: 2025-04-28T17:05:58.060Z
+      lastAccessed: 2025-05-16T18:23:51.041Z
+      id: 111280cd-9ef8-4c36-8cd2-80a4b7a4b805
+    - key: AUTH_TOKEN
+      value: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QWNjb3VudCIsImlkIjoiN2Y4MzJlN2UtZjU5OS00NTA3LThlMjYtYmQzZjg1YmZmMjU4Iiwicm9sZSI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNzQ3NDE5ODI5LCJleHAiOjE3NDgwMjQ2Mjl9.B6nv2aoZXCIgSz_-sM45tZ2ksUUGOERoWpcokWdLTM1kmLin4wAVLlHLnAjqelhCUULfuN9rTV7WXwI94Zlqcc28pz9T64E4DHQ4qbHzW0BDad8KEQYLr6YNZsDLwbbVpZmeRJKEvFbGcT1V2dej9l-5vsCaTdtviUEb5ha8HZ2js4EWHKnfqqAb54MQjxJ69f1pfTsf2zoeJkhYeX2j3rygsLrN1zQT-fZO_bFaP4eS6t0b8TGoQGiTWZpsK4u5f0hA5Hf86LSdsj-Rwv21KQSkhM5zsgK-acthBCqYKxxxprvM1sckmoShZ56mcAbMuXcvHOgocMghl-eltfYaEJYF7ksY8-S9h_S7Ek4XPaflmQL_ZDdW4BLkTY-hddMWHZlZDdZ0So-W7ypGq6rjapyD-0n3qYgIjIsFOsNNvB11VhZt0vOPU0hvjRHMfSK9Wtj8NwqzK18U7CIcpCMWimOVRMxV0zjoY3GolRfETFaIEJZo8o8JatkmJCpghOydVsI1ymXbCg-ikVAHqhtUKeteMNLah-l9yvwFw8pBbnaJlc4M96RkQhhXVKuZmYXGkcIB4EQBAzbASlJ0bFWegn1W4F3EpsK3AoBUz5y_D0DR7_6PUIEKCwYcBDD6iWjwJFR9m2jqzJNmwcrJYNuvACsw90jw0GF9IqRUzvuLT_8
+      maxAge: 604800
+      domain: localhost
+      path: /
+      secure: true
+      httpOnly: true
+      hostOnly: true
+      creation: 2025-05-07T10:57:29.466Z
+      lastAccessed: 2025-05-16T18:23:49.235Z
+      id: 1f017828-8422-4ed3-9fbd-dfc866a40f1e
+environments:
+  name: Base Environment
+  meta:
+    id: env_75d06d4572c0692e4707fc9e3e9e4ebab8ba3ebe
+    created: 1744566872962
+    modified: 1747418967672
+    isPrivate: false
+  data:
+    baseUrl: http://localhost:8080/

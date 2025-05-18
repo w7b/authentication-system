@@ -1,0 +1,74 @@
+type: collection.insomnia.rest/5.0
+name: Authentication System
+meta:
+  id: wrk_6ec04b8e23da4f3bb25d17696d1ba527
+  created: 1744566872961
+  modified: 1745858434931
+collection:
+  - url: "{{_.baseUrl}}api/v1/register"
+    name: /api/v1/register
+    meta:
+      id: req_42e1dda848a7496c8a121e358ea8510a
+      created: 1745858440395
+      modified: 1747419123444
+      isPrivate: false
+      sortKey: -1745858440395
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"login": "testAccount",
+        	"password": "testaccount",
+        	"email": "testeaccount@dmin.com",
+        	"phoneNumber": "444444444"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_75d06d4572c0692e4707fc9e3e9e4ebab8ba3ebe
+    created: 1745858435126
+    modified: 1747419082394
+  cookies:
+    - key: JSESSIONID
+      value: B0ECEAB2BA9AFEB42F2AD8F0572E6996
+      domain: localhost
+      path: /
+      httpOnly: true
+      hostOnly: true
+      creation: 2025-04-28T17:05:58.060Z
+      lastAccessed: 2025-05-16T18:04:53.885Z
+      id: de7cb47d-5042-412f-9884-bd4fff27c4d2
+    - key: AUTH_TOKEN
+      value: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QWNjb3VudCIsImlkIjoiN2Y4MzJlN2UtZjU5OS00NTA3LThlMjYtYmQzZjg1YmZmMjU4Iiwicm9sZSI6W10sImlhdCI6MTc0NzQxOTA4MiwiZXhwIjoxNzQ4MDIzODgyfQ.gC7bOckO0RZZTBafz-rejRt4OsJnJvwSse3Rp4TOk-ose6J-NPFviLBRgJW3xO3VUFYh93uGxj76kfcWheu2WFseb2myM87Va-FHx6MNTSyPc4TZZRZKxbqP3NqScd1DQCMzEcWHuczgcCh7d7MlnA4qhLvPl5wozRgdGCMUpP0NObsOVA-zcGgyA7c43iUmJBmPMNsQO4nQcslHWnkIP_LSZhsHifCwVYO4uUkHCRytFwdVwV3LmtVFpyC-6e0ZJoyRtzrZS8tQhtRYqJ6sMAt0yev7Oxr66nqde9aarjtGyDzbHuJVTF9_U4oYU3jsWCpLum1cSgls9SNC-xoMdGHlzFwH_rIca1PJ3TFnXON5V855impKIvDVaFLUY8nnunXevqMBVXRwju9esApjRzFvjGPKoMciTkQe-fWub4f76IXskDOU_nPYlj_FWLB3dEKxBh3uH9tYq6MqK6hecmhkzKMpzya5KfHYLP6prGzZmdJ9ZbQ-exmj-rwdPkN7c_P-PbmviBVJ3NF0bqovkrH95JOEa9lUQl_iS3vEEcwcy84n8yoLelvlFx673Mp9uj5Fpuh9aFOfewhCEb4XB8rkHro2BLMWMx1AR6bZ6620h_3EjpxbCfmutBSXXOsLg-l9GIjTzhqXW-aP-mbK4Ax64G5_tK9G1pjjw1WYjao
+      maxAge: 604800
+      domain: localhost
+      path: /
+      secure: true
+      httpOnly: true
+      hostOnly: true
+      creation: 2025-05-07T10:57:29.466Z
+      lastAccessed: 2025-05-16T18:11:22.394Z
+      id: cc8c64db-9f5d-4142-b4a4-b6fa16576fc2
+environments:
+  name: Base Environment
+  meta:
+    id: env_75d06d4572c0692e4707fc9e3e9e4ebab8ba3ebe
+    created: 1744566872962
+    modified: 1747418967672
+    isPrivate: false
+  data:
+    baseUrl: http://localhost:8080/

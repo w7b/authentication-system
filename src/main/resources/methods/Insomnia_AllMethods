@@ -1,0 +1,621 @@
+{
+	"log": {
+		"version": "1.2",
+		"creator": {
+			"name": "Insomnia REST Client",
+			"version": "insomnia.desktop.app:v11.0.2"
+		},
+		"entries": [
+			{
+				"startedDateTime": "2025-05-16T18:29:17.292Z",
+				"time": 8.194999999999999,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:8080/api/v1/user",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [
+						{
+							"name": "JSESSIONID",
+							"value": "1420E6F50A0C05DD15354159581044F1",
+							"path": "/",
+							"domain": "localhost",
+							"httpOnly": true
+						}
+					],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.0.2"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [
+						{
+							"name": "JSESSIONID",
+							"value": "1420E6F50A0C05DD15354159581044F1",
+							"path": "/",
+							"httpOnly": true
+						}
+					],
+					"headers": [
+						{
+							"name": "Vary",
+							"value": "Origin"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"name": "Set-Cookie",
+							"value": "JSESSIONID=1420E6F50A0C05DD15354159581044F1; Path=/; HttpOnly"
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"name": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"name": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"name": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"name": "Expires",
+							"value": "0"
+						},
+						{
+							"name": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Fri, 16 May 2025 18:23:51 GMT"
+						}
+					],
+					"content": {
+						"size": 123,
+						"mimeType": "application/json",
+						"text": "{\"id\":\"7f832e7e-f599-4507-8e26-bd3f85bff258\",\"login\":\"testAccount\",\"email\":\"testeaccount@dmin.com\",\"phoneNumber\":444444444}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 8.194999999999999,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "/api/v1/user"
+			},
+			{
+				"startedDateTime": "2025-05-16T18:29:17.292Z",
+				"time": 21.336000000000002,
+				"request": {
+					"method": "PATCH",
+					"url": "http://localhost:8080/api/v1/user/update/7f832e7e-f599-4507-8e26-bd3f85bff258",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [
+						{
+							"name": "JSESSIONID",
+							"value": "1420E6F50A0C05DD15354159581044F1",
+							"path": "/",
+							"domain": "localhost",
+							"httpOnly": true
+						}
+					],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.0.2"
+						}
+					],
+					"queryString": [
+						{
+							"name": "",
+							"value": ""
+						}
+					],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"login\": \"accounte\",\n\t\"email\": \"test@dmin.com\",\n\t\"phoneNumber\": \"1234567891011\"\n}"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Vary",
+							"value": "Origin"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"name": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"name": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"name": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"name": "Expires",
+							"value": "0"
+						},
+						{
+							"name": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Fri, 16 May 2025 18:24:35 GMT"
+						}
+					],
+					"content": {
+						"size": 116,
+						"mimeType": "application/json",
+						"text": "{\"id\":\"7f832e7e-f599-4507-8e26-bd3f85bff258\",\"login\":\"accounte\",\"email\":\"test@dmin.com\",\"phoneNumber\":1234567891011}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 21.336000000000002,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "api/v1/user/update/{uuid}"
+			},
+			{
+				"startedDateTime": "2025-05-16T18:29:17.292Z",
+				"time": 3.024,
+				"request": {
+					"method": "DELETE",
+					"url": "http://localhost:8080/api/v1/logout",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [
+						{
+							"name": "JSESSIONID",
+							"value": "1420E6F50A0C05DD15354159581044F1",
+							"path": "/",
+							"domain": "localhost",
+							"httpOnly": true
+						}
+					],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.0.2"
+						}
+					],
+					"queryString": [
+						{
+							"name": "AUTH_TOKEN",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QWNjb3VudCIsImlkIjoiN2Y4MzJlN2UtZjU5OS00NTA3LThlMjYtYmQzZjg1YmZmMjU4Iiwicm9sZSI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNzQ3NDE5NDE1LCJleHAiOjE3NDgwMjQyMTV9.RsFEZUR_2mqtwXx6-QVDhvWRJtRywmrdoiBqJUUhiwmNZiWpqSFobgyPzuolazUTrQpbKgq7Ua4bdle0oWxjdbB5Fvz7x6nFAxyTz3NLN9kExSRyCpW452shB5nx6tgjwtyRrjNm81SNnhghWJi9WWvkfaQPZh4G2PKGkaEHUqKVKb2YvJT_vNj65K415Oxp7cU4pf2d64U7k7umshScz3qF1YcCIH7N5elIU4TzctgS_AOh-iN3VDrgE1TG1RJcH4kmrT2rJSnBAA1TVjDjI3EuE0b6CqupT45myrPkTSAzV6hew4NiLMOfHFb4vfPDJz9EUFybCToOKjx7rnYWuwefU_xgE3A3gI3rnieFzs2wP0lgFyTistiQ4v_ei-_WTGc0cWKuPYUb9DNMs8zbnoI8ieFsgDW_fkHMvA4ZjonsloqDBturc36S6Vs4can0_xNYtspjQelyMbhgS19PiShHeXtZcjW2HGymdBeWLyIDawvPkP880Etrr-JBIQTDzGvJWZhZ65y_0c-dfxwZgpMyGu5iRdpRdO-3Cod5NXYGMD8xYPFFuHnGl6B8E6HORLlny9TkKhF-bQ4U7uDeQRa_ZWBkEVdZRefCXlGwVQeTnOfyw3U2-XPFyLqlD5A0d9ZXVAezCKh_GCZO35FZFxySOzHLlcrrSepI6022VRM"
+						},
+						{
+							"name": "JSESSIONID",
+							"value": ""
+						}
+					],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [
+						{
+							"name": "JSESSIONID",
+							"value": "",
+							"path": "/",
+							"expires": "1970-01-01T00:00:10.000Z"
+						},
+						{
+							"name": "AUTH_TOKEN",
+							"value": "",
+							"path": "/",
+							"expires": "1970-01-01T00:00:10.000Z"
+						}
+					],
+					"headers": [
+						{
+							"name": "Vary",
+							"value": "Origin"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"name": "Set-Cookie",
+							"value": "JSESSIONID=; Max-Age=0; Expires=Thu, 01 Jan 1970 00:00:10 GMT; Path=/"
+						},
+						{
+							"name": "Set-Cookie",
+							"value": "AUTH_TOKEN=; Max-Age=0; Expires=Thu, 01 Jan 1970 00:00:10 GMT; Path=/"
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"name": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"name": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"name": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"name": "Expires",
+							"value": "0"
+						},
+						{
+							"name": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"name": "Content-Length",
+							"value": "0"
+						},
+						{
+							"name": "Date",
+							"value": "Fri, 16 May 2025 18:20:32 GMT"
+						}
+					],
+					"content": {
+						"size": 0,
+						"mimeType": "",
+						"text": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 3.024,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "/api/v1/me"
+			},
+			{
+				"startedDateTime": "2025-05-16T18:29:17.292Z",
+				"time": 118.51,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:8080/api/v1/login",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [
+						{
+							"name": "JSESSIONID",
+							"value": "1420E6F50A0C05DD15354159581044F1",
+							"path": "/",
+							"domain": "localhost",
+							"httpOnly": true
+						}
+					],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.0.2"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n  \"login\": \"testAccount\",\n  \"password\": \"testaccount\"\n}"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [
+						{
+							"name": "AUTH_TOKEN",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QWNjb3VudCIsImlkIjoiN2Y4MzJlN2UtZjU5OS00NTA3LThlMjYtYmQzZjg1YmZmMjU4Iiwicm9sZSI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNzQ3NDE5ODI5LCJleHAiOjE3NDgwMjQ2Mjl9.B6nv2aoZXCIgSz_-sM45tZ2ksUUGOERoWpcokWdLTM1kmLin4wAVLlHLnAjqelhCUULfuN9rTV7WXwI94Zlqcc28pz9T64E4DHQ4qbHzW0BDad8KEQYLr6YNZsDLwbbVpZmeRJKEvFbGcT1V2dej9l-5vsCaTdtviUEb5ha8HZ2js4EWHKnfqqAb54MQjxJ69f1pfTsf2zoeJkhYeX2j3rygsLrN1zQT-fZO_bFaP4eS6t0b8TGoQGiTWZpsK4u5f0hA5Hf86LSdsj-Rwv21KQSkhM5zsgK-acthBCqYKxxxprvM1sckmoShZ56mcAbMuXcvHOgocMghl-eltfYaEJYF7ksY8-S9h_S7Ek4XPaflmQL_ZDdW4BLkTY-hddMWHZlZDdZ0So-W7ypGq6rjapyD-0n3qYgIjIsFOsNNvB11VhZt0vOPU0hvjRHMfSK9Wtj8NwqzK18U7CIcpCMWimOVRMxV0zjoY3GolRfETFaIEJZo8o8JatkmJCpghOydVsI1ymXbCg-ikVAHqhtUKeteMNLah-l9yvwFw8pBbnaJlc4M96RkQhhXVKuZmYXGkcIB4EQBAzbASlJ0bFWegn1W4F3EpsK3AoBUz5y_D0DR7_6PUIEKCwYcBDD6iWjwJFR9m2jqzJNmwcrJYNuvACsw90jw0GF9IqRUzvuLT_8",
+							"path": "/",
+							"expires": "2025-05-23T18:23:49.000Z",
+							"httpOnly": true,
+							"secure": true
+						}
+					],
+					"headers": [
+						{
+							"name": "Vary",
+							"value": "Origin"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"name": "Set-Cookie",
+							"value": "AUTH_TOKEN=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QWNjb3VudCIsImlkIjoiN2Y4MzJlN2UtZjU5OS00NTA3LThlMjYtYmQzZjg1YmZmMjU4Iiwicm9sZSI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNzQ3NDE5ODI5LCJleHAiOjE3NDgwMjQ2Mjl9.B6nv2aoZXCIgSz_-sM45tZ2ksUUGOERoWpcokWdLTM1kmLin4wAVLlHLnAjqelhCUULfuN9rTV7WXwI94Zlqcc28pz9T64E4DHQ4qbHzW0BDad8KEQYLr6YNZsDLwbbVpZmeRJKEvFbGcT1V2dej9l-5vsCaTdtviUEb5ha8HZ2js4EWHKnfqqAb54MQjxJ69f1pfTsf2zoeJkhYeX2j3rygsLrN1zQT-fZO_bFaP4eS6t0b8TGoQGiTWZpsK4u5f0hA5Hf86LSdsj-Rwv21KQSkhM5zsgK-acthBCqYKxxxprvM1sckmoShZ56mcAbMuXcvHOgocMghl-eltfYaEJYF7ksY8-S9h_S7Ek4XPaflmQL_ZDdW4BLkTY-hddMWHZlZDdZ0So-W7ypGq6rjapyD-0n3qYgIjIsFOsNNvB11VhZt0vOPU0hvjRHMfSK9Wtj8NwqzK18U7CIcpCMWimOVRMxV0zjoY3GolRfETFaIEJZo8o8JatkmJCpghOydVsI1ymXbCg-ikVAHqhtUKeteMNLah-l9yvwFw8pBbnaJlc4M96RkQhhXVKuZmYXGkcIB4EQBAzbASlJ0bFWegn1W4F3EpsK3AoBUz5y_D0DR7_6PUIEKCwYcBDD6iWjwJFR9m2jqzJNmwcrJYNuvACsw90jw0GF9IqRUzvuLT_8; Max-Age=604800; Expires=Fri, 23 May 2025 18:23:49 GMT; Path=/; Secure; HttpOnly"
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"name": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"name": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"name": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"name": "Expires",
+							"value": "0"
+						},
+						{
+							"name": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Fri, 16 May 2025 18:23:49 GMT"
+						}
+					],
+					"content": {
+						"size": 123,
+						"mimeType": "application/json",
+						"text": "{\"id\":\"7f832e7e-f599-4507-8e26-bd3f85bff258\",\"login\":\"testAccount\",\"email\":\"testeaccount@dmin.com\",\"phoneNumber\":444444444}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 118.51,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "/api/v1/login"
+			},
+			{
+				"startedDateTime": "2025-05-16T18:29:17.292Z",
+				"time": 151.81900000000002,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:8080/api/v1/register",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [
+						{
+							"name": "JSESSIONID",
+							"value": "1420E6F50A0C05DD15354159581044F1",
+							"path": "/",
+							"domain": "localhost",
+							"httpOnly": true
+						}
+					],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.0.2"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"login\": \"testAccount\",\n\t\"password\": \"testaccount\",\n\t\"email\": \"testeaccount@dmin.com\",\n\t\"phoneNumber\": \"444444444\"\n}"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [
+						{
+							"name": "AUTH_TOKEN",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QWNjb3VudCIsImlkIjoiN2Y4MzJlN2UtZjU5OS00NTA3LThlMjYtYmQzZjg1YmZmMjU4Iiwicm9sZSI6W10sImlhdCI6MTc0NzQxOTA4MiwiZXhwIjoxNzQ4MDIzODgyfQ.gC7bOckO0RZZTBafz-rejRt4OsJnJvwSse3Rp4TOk-ose6J-NPFviLBRgJW3xO3VUFYh93uGxj76kfcWheu2WFseb2myM87Va-FHx6MNTSyPc4TZZRZKxbqP3NqScd1DQCMzEcWHuczgcCh7d7MlnA4qhLvPl5wozRgdGCMUpP0NObsOVA-zcGgyA7c43iUmJBmPMNsQO4nQcslHWnkIP_LSZhsHifCwVYO4uUkHCRytFwdVwV3LmtVFpyC-6e0ZJoyRtzrZS8tQhtRYqJ6sMAt0yev7Oxr66nqde9aarjtGyDzbHuJVTF9_U4oYU3jsWCpLum1cSgls9SNC-xoMdGHlzFwH_rIca1PJ3TFnXON5V855impKIvDVaFLUY8nnunXevqMBVXRwju9esApjRzFvjGPKoMciTkQe-fWub4f76IXskDOU_nPYlj_FWLB3dEKxBh3uH9tYq6MqK6hecmhkzKMpzya5KfHYLP6prGzZmdJ9ZbQ-exmj-rwdPkN7c_P-PbmviBVJ3NF0bqovkrH95JOEa9lUQl_iS3vEEcwcy84n8yoLelvlFx673Mp9uj5Fpuh9aFOfewhCEb4XB8rkHro2BLMWMx1AR6bZ6620h_3EjpxbCfmutBSXXOsLg-l9GIjTzhqXW-aP-mbK4Ax64G5_tK9G1pjjw1WYjao",
+							"path": "/",
+							"expires": "2025-05-23T18:11:22.000Z",
+							"httpOnly": true,
+							"secure": true
+						}
+					],
+					"headers": [
+						{
+							"name": "Vary",
+							"value": "Origin"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"name": "Set-Cookie",
+							"value": "AUTH_TOKEN=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QWNjb3VudCIsImlkIjoiN2Y4MzJlN2UtZjU5OS00NTA3LThlMjYtYmQzZjg1YmZmMjU4Iiwicm9sZSI6W10sImlhdCI6MTc0NzQxOTA4MiwiZXhwIjoxNzQ4MDIzODgyfQ.gC7bOckO0RZZTBafz-rejRt4OsJnJvwSse3Rp4TOk-ose6J-NPFviLBRgJW3xO3VUFYh93uGxj76kfcWheu2WFseb2myM87Va-FHx6MNTSyPc4TZZRZKxbqP3NqScd1DQCMzEcWHuczgcCh7d7MlnA4qhLvPl5wozRgdGCMUpP0NObsOVA-zcGgyA7c43iUmJBmPMNsQO4nQcslHWnkIP_LSZhsHifCwVYO4uUkHCRytFwdVwV3LmtVFpyC-6e0ZJoyRtzrZS8tQhtRYqJ6sMAt0yev7Oxr66nqde9aarjtGyDzbHuJVTF9_U4oYU3jsWCpLum1cSgls9SNC-xoMdGHlzFwH_rIca1PJ3TFnXON5V855impKIvDVaFLUY8nnunXevqMBVXRwju9esApjRzFvjGPKoMciTkQe-fWub4f76IXskDOU_nPYlj_FWLB3dEKxBh3uH9tYq6MqK6hecmhkzKMpzya5KfHYLP6prGzZmdJ9ZbQ-exmj-rwdPkN7c_P-PbmviBVJ3NF0bqovkrH95JOEa9lUQl_iS3vEEcwcy84n8yoLelvlFx673Mp9uj5Fpuh9aFOfewhCEb4XB8rkHro2BLMWMx1AR6bZ6620h_3EjpxbCfmutBSXXOsLg-l9GIjTzhqXW-aP-mbK4Ax64G5_tK9G1pjjw1WYjao; Max-Age=604800; Expires=Fri, 23 May 2025 18:11:22 GMT; Path=/; Secure; HttpOnly"
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"name": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"name": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"name": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"name": "Expires",
+							"value": "0"
+						},
+						{
+							"name": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Fri, 16 May 2025 18:11:22 GMT"
+						}
+					],
+					"content": {
+						"size": 123,
+						"mimeType": "application/json",
+						"text": "{\"id\":\"7f832e7e-f599-4507-8e26-bd3f85bff258\",\"login\":\"testAccount\",\"email\":\"testeaccount@dmin.com\",\"phoneNumber\":444444444}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 151.81900000000002,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "/api/v1/register"
+			}
+		]
+	}
+}

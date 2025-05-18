@@ -100,48 +100,26 @@ public ResponseEntity<?> authenticateUser(@RequestBody RequestLoginDTO request, 
     }
 
 
-    @PostMapping("logout")
+    @DeleteMapping("logout")
     public ResponseEntity<Void> logout(HttpServletRequest request) {
         HttpSession session = request.getSession(false);
 
-        if (session != null) {
-            session.invalidate();
-            logger.info("User logged out: {}", session.getId());
-        }
+        userService.logoutUser(session);
+        logger.info("User logged out");
+
         return ResponseEntity.ok().build();
     }
 
     @GetMapping("user")
     @PreAuthorize("isAuthenticated()")
     public ResponseEntity<?> getCurrentUser(@AuthenticationPrincipal CustomerUserDetails userDetails) {
-
         if (userDetails == null) {
-            logger.error("Endpoint /me chamado sem AuthenticationPrincipal injetado.");
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("User not authenticated.");
+            logger.error("Endpoint /user chamado sem AuthenticationPrincipal injetado");
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Authentication required.");
         }
 
-        try {
-            UserEntity user = userRepository.findByLogin(userDetails.getUsername())
-                    .orElseThrow(() -> new UsernameNotFoundException("Usuário não encontrado no DB"));
-
-            UserResponseDto infoResponse = new UserResponseDto(
-                    user.getUuid(),
-                    user.getLogin(),
-                    user.getEmail(),
-                    user.getPhoneNumber());
-
-            return ResponseEntity.ok(infoResponse);
-
-        } catch (UsernameNotFoundException e) {
-            logger.warn("User from authenticated token not found in DB: " + userDetails.getUsername(), e);
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User details not found in database.");
-        }
-        catch (ValidationException e) {
-            logger.trace(e.getMessage());
-            HttpStatus status = e.getCause() != null ? HttpStatus.INTERNAL_SERVER_ERROR : HttpStatus.valueOf(e.getCause().getMessage());
-            logger.trace("ValidationException getting current user: {}", e.getMessage());
-            return ResponseEntity.status(status).body("Error getting current user info: " + e.getMessage());
-        }
+        return userService.selectCurrentUser(userDetails);
     }
+
 
 }

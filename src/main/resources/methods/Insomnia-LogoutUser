@@ -1,0 +1,71 @@
+type: collection.insomnia.rest/5.0
+name: Authentication System
+meta:
+  id: wrk_6ec04b8e23da4f3bb25d17696d1ba527
+  created: 1744566872961
+  modified: 1745858434931
+collection:
+  - url: "{{baseUrl}}api/v1/logout"
+    name: /api/v1/me
+    meta:
+      id: req_39538e506e2c46dda6add43a0a44f45f
+      created: 1745930461196
+      modified: 1747419599978
+      isPrivate: false
+      sortKey: -1745930461196
+    method: DELETE
+    parameters:
+      - id: pair_8e3efbd13b7447e6b95c62891523c5d2
+        name: AUTH_TOKEN
+        value: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QWNjb3VudCIsImlkIjoiN2Y4MzJlN2UtZjU5OS00NTA3LThlMjYtYmQzZjg1YmZmMjU4Iiwicm9sZSI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNzQ3NDE5NDE1LCJleHAiOjE3NDgwMjQyMTV9.RsFEZUR_2mqtwXx6-QVDhvWRJtRywmrdoiBqJUUhiwmNZiWpqSFobgyPzuolazUTrQpbKgq7Ua4bdle0oWxjdbB5Fvz7x6nFAxyTz3NLN9kExSRyCpW452shB5nx6tgjwtyRrjNm81SNnhghWJi9WWvkfaQPZh4G2PKGkaEHUqKVKb2YvJT_vNj65K415Oxp7cU4pf2d64U7k7umshScz3qF1YcCIH7N5elIU4TzctgS_AOh-iN3VDrgE1TG1RJcH4kmrT2rJSnBAA1TVjDjI3EuE0b6CqupT45myrPkTSAzV6hew4NiLMOfHFb4vfPDJz9EUFybCToOKjx7rnYWuwefU_xgE3A3gI3rnieFzs2wP0lgFyTistiQ4v_ei-_WTGc0cWKuPYUb9DNMs8zbnoI8ieFsgDW_fkHMvA4ZjonsloqDBturc36S6Vs4can0_xNYtspjQelyMbhgS19PiShHeXtZcjW2HGymdBeWLyIDawvPkP880Etrr-JBIQTDzGvJWZhZ65y_0c-dfxwZgpMyGu5iRdpRdO-3Cod5NXYGMD8xYPFFuHnGl6B8E6HORLlny9TkKhF-bQ4U7uDeQRa_ZWBkEVdZRefCXlGwVQeTnOfyw3U2-XPFyLqlD5A0d9ZXVAezCKh_GCZO35FZFxySOzHLlcrrSepI6022VRM
+        disabled: false
+      - id: pair_a380e0bc6d8346bd95b8b9be431e0080
+        name: JSESSIONID
+        disabled: false
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_75d06d4572c0692e4707fc9e3e9e4ebab8ba3ebe
+    created: 1745858435126
+    modified: 1747419831041
+  cookies:
+    - key: JSESSIONID
+      value: 1420E6F50A0C05DD15354159581044F1
+      domain: localhost
+      path: /
+      httpOnly: true
+      hostOnly: true
+      creation: 2025-04-28T17:05:58.060Z
+      lastAccessed: 2025-05-16T18:23:51.041Z
+      id: 111280cd-9ef8-4c36-8cd2-80a4b7a4b805
+    - key: AUTH_TOKEN
+      value: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QWNjb3VudCIsImlkIjoiN2Y4MzJlN2UtZjU5OS00NTA3LThlMjYtYmQzZjg1YmZmMjU4Iiwicm9sZSI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNzQ3NDE5ODI5LCJleHAiOjE3NDgwMjQ2Mjl9.B6nv2aoZXCIgSz_-sM45tZ2ksUUGOERoWpcokWdLTM1kmLin4wAVLlHLnAjqelhCUULfuN9rTV7WXwI94Zlqcc28pz9T64E4DHQ4qbHzW0BDad8KEQYLr6YNZsDLwbbVpZmeRJKEvFbGcT1V2dej9l-5vsCaTdtviUEb5ha8HZ2js4EWHKnfqqAb54MQjxJ69f1pfTsf2zoeJkhYeX2j3rygsLrN1zQT-fZO_bFaP4eS6t0b8TGoQGiTWZpsK4u5f0hA5Hf86LSdsj-Rwv21KQSkhM5zsgK-acthBCqYKxxxprvM1sckmoShZ56mcAbMuXcvHOgocMghl-eltfYaEJYF7ksY8-S9h_S7Ek4XPaflmQL_ZDdW4BLkTY-hddMWHZlZDdZ0So-W7ypGq6rjapyD-0n3qYgIjIsFOsNNvB11VhZt0vOPU0hvjRHMfSK9Wtj8NwqzK18U7CIcpCMWimOVRMxV0zjoY3GolRfETFaIEJZo8o8JatkmJCpghOydVsI1ymXbCg-ikVAHqhtUKeteMNLah-l9yvwFw8pBbnaJlc4M96RkQhhXVKuZmYXGkcIB4EQBAzbASlJ0bFWegn1W4F3EpsK3AoBUz5y_D0DR7_6PUIEKCwYcBDD6iWjwJFR9m2jqzJNmwcrJYNuvACsw90jw0GF9IqRUzvuLT_8
+      maxAge: 604800
+      domain: localhost
+      path: /
+      secure: true
+      httpOnly: true
+      hostOnly: true
+      creation: 2025-05-07T10:57:29.466Z
+      lastAccessed: 2025-05-16T18:23:49.235Z
+      id: 1f017828-8422-4ed3-9fbd-dfc866a40f1e
+environments:
+  name: Base Environment
+  meta:
+    id: env_75d06d4572c0692e4707fc9e3e9e4ebab8ba3ebe
+    created: 1744566872962
+    modified: 1747418967672
+    isPrivate: false
+  data:
+    baseUrl: http://localhost:8080/
